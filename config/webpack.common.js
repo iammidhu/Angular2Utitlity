@@ -30,15 +30,7 @@ module.exports = {
             loader: 'file-loader?name=assets/[name].[hash].[ext]'
         }, {
             test: /\.(scss|css)$/,
-            use: ExtractTextPlugin.extract({
-                use: [
-                    'css-loader',
-                    'sass-loader',
-                    'autoprefixer-loader'
-                ],
-                fallback: 'style-loader',
-                publicPath: '/',
-            })
+            loaders: ['to-string-loader', 'css-loader', 'sass-loader']
         }]
     },
     plugins: [
