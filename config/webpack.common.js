@@ -30,15 +30,7 @@ module.exports = {
             loader: 'file-loader?name=assets/[name].[hash].[ext]'
         }, {
             test: /\.(scss|css)$/,
-            use: ExtractTextPlugin.extract({
-                use: [
-                    'css-loader',
-                    'sass-loader',
-                    'autoprefixer-loader'
-                ],
-                fallback: 'style-loader',
-                publicPath: '/',
-            })
+            loader:['to-string-loader', 'css-loader', 'sass-loader']
         }]
     },
     plugins: [
@@ -49,7 +41,7 @@ module.exports = {
             {} // a map of your routes
         ),
 
-        new webpack.optimize.CommonsChunkPlugin({
+        new webpack.optimize.CommonsChunkPlugin({  // This will remove the shared dependency among app, vendor, and polyfills
             name: ['app', 'vendor', 'polyfills']
         }),
 
