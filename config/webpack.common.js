@@ -30,7 +30,16 @@ module.exports = {
             loader: 'file-loader?name=assets/[name].[hash].[ext]'
         }, {
             test: /\.(scss|css)$/,
-            loaders: ['to-string-loader', 'css-loader', 'sass-loader']
+            use: [{
+                loader: 'to-string-loader'
+            }, {
+                loader: 'css-loader'
+            }, {
+                loader: 'sass-loader',
+                options: {
+                    includePaths: [util.root('node_modules', '@angular-mdl/core', 'scss')]
+                }
+            }]
         }]
     },
     plugins: [

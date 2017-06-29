@@ -1,16 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
+import { FormsModule }   from '@angular/forms';
+import { MdlModule } from '@angular-mdl/core';
+
+
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from '../login/login.component';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     imports: [
-        BrowserModule
+        BrowserModule,
+        HttpModule,
+        FormsModule,
+        MdlModule
     ],
     declarations: [
         AppComponent,
-        LoginComponent
+        LoginComponent,
+        HeaderComponent,
+        FooterComponent
     ],
     bootstrap: [AppComponent]
 })
