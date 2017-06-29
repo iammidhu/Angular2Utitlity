@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./config/webpack.dev.js",
-    "build": "webpack --config ./config/webpack.prod.js"
+    "build": "npm test && rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "test": "karma start"
   },
   "keywords": [],
   "author": "",
@@ -41,6 +42,7 @@
     "karma": "^1.2.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.0.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.1",
     "node-sass": "^4.5.3",

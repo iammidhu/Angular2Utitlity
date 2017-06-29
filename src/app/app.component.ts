@@ -10,5 +10,4 @@ export class AppComponent {
     handleUserUpdated(user: any): void {
         console.log(user);
     }
-
 }

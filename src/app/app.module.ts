@@ -5,7 +5,6 @@ import { FormsModule }   from '@angular/forms';
 import { MdlModule } from '@angular-mdl/core';
 
 
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,6 +23,6 @@ import { FooterComponent } from './footer/footer.component';
         HeaderComponent,
         FooterComponent
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule { }

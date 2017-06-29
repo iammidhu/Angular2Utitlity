@@ -50,7 +50,7 @@ module.exports = {
             {} // a map of your routes
         ),
 
-        new webpack.optimize.CommonsChunkPlugin({
+        new webpack.optimize.CommonsChunkPlugin({ // This will remove the shared dependency among app, vendor, and polyfills
             name: ['app', 'vendor', 'polyfills']
         }),
 
