@@ -1,0 +1,11 @@
+.login_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 81.5vh;
+}
+
+.main_body {
+    display: block;
+    height: calc(100% - 150px);
+}
