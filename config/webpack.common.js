@@ -36,9 +36,6 @@ module.exports = {
                 loader: 'css-loader'
             }, {
                 loader: 'sass-loader',
-                options: {
-                    includePaths: [util.root('node_modules', '@angular-mdl/core', 'scss')]
-                }
             }]
         }]
     },

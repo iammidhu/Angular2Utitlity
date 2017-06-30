@@ -1,7 +1,9 @@
-<app-header></app-header>
-<main>
-    <div class="login_box">
-        <app-login (userUpdated)="handleUserUpdated($event)"></app-login>
-    </div>
-</main>
-<app-footer></app-footer>
+<div style="height:100%;">
+  <app-header></app-header>
+  <main class="main_body">
+      <div class="login_box">
+          <app-login (userUpdated)="handleUserUpdated($event)"></app-login>
+      </div>
+  </main>
+  <app-footer></app-footer>
+</div>

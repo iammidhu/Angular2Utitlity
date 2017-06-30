@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+import '../assets/css/main.scss';
+
 @NgModule({
     imports: [
         BrowserModule,
