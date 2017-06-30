@@ -1,0 +1,28 @@
+<div class="main_body">
+    <app-header></app-header>
+    <div class="login_box">
+        <div class="login_bg">
+            <h2 class="login_header">Sign in</h2>
+            <div class="form_wrapper">
+                <form (ngSubmit)="loginForm.valid && doLogin()" #loginForm="ngForm" novalidate>
+                    <div class="row">
+                        <mdl-textfield label="Email" type="email" floating-label required [(ngModel)]="user.email" name="email" #email="ngModel" email="true"></mdl-textfield>
+                        <p class="error" *ngIf="loginForm.submitted&&!email.valid">
+                            Please enter a valid email
+                        </p>
+                    </div>
+                    <div class="row">
+                        <mdl-textfield label="Password" type="password" floating-label required [(ngModel)]="user.password" name="password" #password="ngModel"></mdl-textfield>
+                        <p class="error" *ngIf="loginForm.submitted&&!password.valid">
+                            Please enter a password
+                        </p>
+                    </div>
+                    <div class="row">
+                        <button type="submit" name="button" mdl-button mdl-button-type="raised" mdl-colored="primary">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

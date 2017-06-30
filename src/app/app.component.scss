@@ -1,11 +1,9 @@
-.login_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 81.5vh;
+body {
+    background: #f1f1f1;
+    color: #333;
+    height: 100%;
 }
 
-.main_body {
-    display: block;
-    height: calc(100% - 150px);
+.main_content {
+    height: 100%;
 }
