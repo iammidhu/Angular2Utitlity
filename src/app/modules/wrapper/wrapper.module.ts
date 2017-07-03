@@ -4,6 +4,7 @@ import { RouterModule }   from '@angular/router';
 
 import { HomeModule }     from '../home/home.module';
 import { TaskModule }     from '../task/task.module';
+import { HeaderModule } from '../../theme/header/header.module';
 
 import { WrapperComponent }     from './wrapper.component';
 import { SideBarComponent }     from '../../theme/sidebar/sideBar.component';
@@ -14,7 +15,8 @@ import { WrapperRouting }     from './wrapper.routes';
     BrowserModule,
     HomeModule,
     TaskModule,
-    WrapperRouting
+    WrapperRouting,
+    HeaderModule
   ],
   declarations: [
     WrapperComponent,

@@ -1,7 +1,6 @@
-<nav>
-	<ul>
-		<li><a routerLink="/zb/home">Home</a></li>
-		<li><a routerLink="/zb/task">Tasks</a></li>
-	</ul>
-</nav>
-
+<aside class="sidebar">
+    <ul class="sidebar_container">
+        <li routerLink="/zb/home" [class.selected]="currentTab == 'home'" >Home</li>
+        <li routerLink="/zb/task" [class.selected]="currentTab == 'task'">Tasks</li>
+    </ul>
+</aside>

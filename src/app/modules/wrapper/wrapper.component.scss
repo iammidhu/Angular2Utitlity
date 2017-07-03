@@ -1,0 +1,18 @@
+main {
+    height: 100%;
+    .set_position {
+        float: left;
+        height: calc(100% - 70px);
+    }
+    .sidebar_wrapper {
+        width: 243px;
+        position: relative;
+    }
+    .content_wrapper {
+        width: calc(100% - 243px);
+        overflow: auto;
+        .wrapper_padding {
+            padding: 5px;
+        }
+    }
+}
