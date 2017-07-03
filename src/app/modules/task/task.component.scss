@@ -1,0 +1,52 @@
+div.mdl-tabs__tab-bar {
+    display: block !important;
+}
+
+.task_list_wrapper {
+    margin-left: 15px;
+    .task_header {
+        box-shadow: 0 -1px 7px 1px rgba(221, 221, 221, 1);
+        margin-bottom: 0;
+        background: #fff;
+        display: flex;
+        height: 55px;
+        align-items: center;
+        margin-top: 13px;
+        .task_header_name {
+            width: 20%;
+            word-wrap: break-word;
+            color: #6c6c6c;
+            text-transform: capitalize;
+            font-weight: bold;
+            padding-left: 7px;
+        }
+    }
+    .task_listing {
+        display: flex;
+        height: 52px;
+        align-items: center;
+        padding-left: 7px;
+        background: #F5F5F5;
+        &:nth-of-type(2n+1) {
+            background: #fff;
+        }
+        .task_data {
+            width: 20%;
+            &.percentage {
+                font-weight: bold;
+                color: #6c6c6c;
+            }
+            &.Delayed {
+                color: #e2c44b;
+                font-weight: bold;
+            }
+            &.Completed {
+                color: #39BE6B;
+                font-weight: bold;
+            }
+        }
+        .display_none {
+            display: none;
+        }
+    }
+}
