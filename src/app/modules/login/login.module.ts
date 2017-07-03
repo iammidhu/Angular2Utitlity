@@ -8,6 +8,8 @@ import { LoginComponent }  from './login.component';
 import { HeaderComponent } from '../../theme/header/header.component';
 import { FooterComponent } from '../../theme/footer/footer.component';
 
+import '../../../assets/data/team.json';
+
 @NgModule({
     imports: [
         BrowserModule,
