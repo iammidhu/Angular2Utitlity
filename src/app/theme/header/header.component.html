@@ -1,9 +1,9 @@
 <header class="main_heading">
-    <div class="logo_wrapper">
+    <div class="logo_wrapper" [class.inner_logo]="!!isInnerPage">
         <img src="../../../assets/img/zive_logo.png" alt="">
         <h1>ZB 2.0</h1>
     </div>
-    <div class="user_wrapper">
+    <div class="user_wrapper" *ngIf="isInnerPage">
       Username
     </div>
 </header>
