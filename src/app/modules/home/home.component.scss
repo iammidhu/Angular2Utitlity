@@ -1,0 +1,17 @@
+.notification_page {
+    ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        li {
+            flex-grow: 1;
+            list-style: none;
+            max-width: 5%;
+        }
+
+        li.notification_name {
+            max-width: 40%;
+        }
+    }
+}
