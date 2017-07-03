@@ -6,6 +6,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
     styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  
     @Output() userUpdated = new EventEmitter();
 
     user: any = {};
@@ -13,7 +14,7 @@ export class LoginComponent {
     constructor() {
     }
 
-    doLogin() {
+    private doLogin() {
         this.userUpdated.emit(this.user);
     }
 }
