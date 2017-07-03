@@ -2,19 +2,12 @@ import { MdlSnackbarService } from "@angular-mdl/core";
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class AlertService {
+export class ToastService {
     constructor(private mdlSnackbarService: MdlSnackbarService) { }
 
-    alertMe(message: string) {
+    toastMe(message: string) {
         this.mdlSnackbarService.showSnackbar({
             message: message,
-            timeout: 200,
-            action: {
-                handler: () => {
-
-                },
-                text: 'Close'
-            }
         });
     }
 }

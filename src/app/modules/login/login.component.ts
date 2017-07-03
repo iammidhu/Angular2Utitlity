@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { AlertService } from '../../_services/alert.service';
+import { ToastService } from '../../_services/toast.service';
 import { AuthenticationService } from '../../_services/authentication.service';
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss'],
-    providers: [AuthenticationService, AlertService]
+    providers: [AuthenticationService, ToastService]
 })
 export class LoginComponent {
 
     user: any = {};
 
-    constructor(private authenticationService: AuthenticationService, private alertService: AlertService, private router: Router, ) {
+    constructor(private authenticationService: AuthenticationService, private toastService: ToastService, private router: Router, ) {
 
     }
     private doLogin() {
@@ -22,7 +22,7 @@ export class LoginComponent {
         if (auth) {
             this.router.navigate(['zb']);
         } else {
-            this.alertService.alertMe('Username or password is incorrect');
+            this.toastService.toastMe('Username or password is incorrect');
         }
     }
 }
