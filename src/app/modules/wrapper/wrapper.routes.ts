@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { WrapperComponent } from './wrapper.component';
 import { HomeComponent } from '../home/home.component';
 import { TaskComponent } from '../task/task.component';
+import { TaskDetailsComponent } from '../task/task-details.component';
 
 const routes: Routes = [{
 	path:'zb',
@@ -15,9 +16,21 @@ const routes: Routes = [{
     children: [{
         path: 'home',
         component: HomeComponent,
+        data: {
+          breadcrumb: "Home"
+        }
     },{
     	path:'task',
-    	component:TaskComponent
+    	component:TaskComponent,
+        data: {
+          breadcrumb: "Task"
+        }
+    },{
+        path:'task/:id',
+        component:TaskDetailsComponent,
+        data: {
+          breadcrumb: "Details"
+        }
     }]
 }];
 

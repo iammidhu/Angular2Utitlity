@@ -2,6 +2,34 @@ import { Task } from '../types/task.type';
 
 export const TASKS: Task[] = [{
     taskId: 36371,
+    taskDesc: "testing",
+    checkList: [{
+        "item": "Android build",
+        "itemId": 1213,
+        "CheckListDescription": "Android build",
+        "StartDate": "2017-02-01T00:00:00",
+        "EndDate": "2017-02-07T23:59:59",
+        "status": 4,
+        "EstimatedTime": 86400000,
+        "TotalHoursBurned": 14400000,
+        "PercentageCompleted": 31.00,
+        "CheckListMembers": [{ "memberId": 25982, "memberName": "Merry", "displayName": "Merry" }],
+        "attachments": [],
+        "CanLog": true
+    }, {
+        "item": "iOS build",
+        "itemId": 1214,
+        "CheckListDescription": "ios Build",
+        "StartDate": "2017-02-01T00:00:00",
+        "EndDate": "2017-02-07T23:59:59",
+        "status": 4,
+        "EstimatedTime": 86400000,
+        "TotalHoursBurned": 18000000,
+        "PercentageCompleted": 35.00,
+        "CheckListMembers": [{ "memberId": 25979, "memberName": "Gandalf", "displayName": "gandalf" }],
+        "attachments": [],
+        "CanLog": false
+    }],
     name: "Install Windows In Machine",
     dueDate: "2017-04-21T23:59:59",
     burnedHours: "0/5",
@@ -12,6 +40,34 @@ export const TASKS: Task[] = [{
     isAssigned: true
 }, {
     taskId: 36372,
+    taskDesc: "testing",
+    checkList: [{
+        "item": "Android build",
+        "itemId": 1213,
+        "CheckListDescription": "Android build",
+        "StartDate": "2017-02-01T00:00:00",
+        "EndDate": "2017-02-07T23:59:59",
+        "status": 4,
+        "EstimatedTime": 86400000,
+        "TotalHoursBurned": 14400000,
+        "PercentageCompleted": 31.00,
+        "CheckListMembers": [{ "memberId": 25982, "memberName": "Merry", "displayName": "Merry" }],
+        "attachments": [],
+        "CanLog": true
+    }, {
+        "item": "iOS build",
+        "itemId": 1214,
+        "CheckListDescription": "ios Build",
+        "StartDate": "2017-02-01T00:00:00",
+        "EndDate": "2017-02-07T23:59:59",
+        "status": 4,
+        "EstimatedTime": 86400000,
+        "TotalHoursBurned": 18000000,
+        "PercentageCompleted": 35.00,
+        "CheckListMembers": [{ "memberId": 25979, "memberName": "Gandalf", "displayName": "gandalf" }],
+        "attachments": [],
+        "CanLog": false
+    }],
     name: "Task1",
     dueDate: "2017-04-29T23:59:59",
     burnedHours: "6/8",
@@ -22,6 +78,34 @@ export const TASKS: Task[] = [{
     isAssigned: true
 }, {
     taskId: 36373,
+    taskDesc: "testing",
+    checkList: [{
+        "item": "Android build",
+        "itemId": 1213,
+        "CheckListDescription": "Android build",
+        "StartDate": "2017-02-01T00:00:00",
+        "EndDate": "2017-02-07T23:59:59",
+        "status": 4,
+        "EstimatedTime": 86400000,
+        "TotalHoursBurned": 14400000,
+        "PercentageCompleted": 31.00,
+        "CheckListMembers": [{ "memberId": 25982, "memberName": "Merry", "displayName": "Merry" }],
+        "attachments": [],
+        "CanLog": true
+    }, {
+        "item": "iOS build",
+        "itemId": 1214,
+        "CheckListDescription": "ios Build",
+        "StartDate": "2017-02-01T00:00:00",
+        "EndDate": "2017-02-07T23:59:59",
+        "status": 4,
+        "EstimatedTime": 86400000,
+        "TotalHoursBurned": 18000000,
+        "PercentageCompleted": 35.00,
+        "CheckListMembers": [{ "memberId": 25979, "memberName": "Gandalf", "displayName": "gandalf" }],
+        "attachments": [],
+        "CanLog": false
+    }],
     name: "Testing for description length",
     dueDate: "2017-05-29T23:59:59",
     burnedHours: "12/12",
@@ -32,6 +116,34 @@ export const TASKS: Task[] = [{
     isAssigned: false
 }, {
     taskId: 36374,
+    taskDesc: "testing",
+    checkList: [{
+        "item": "Android build",
+        "itemId": 1213,
+        "CheckListDescription": "Android build",
+        "StartDate": "2017-02-01T00:00:00",
+        "EndDate": "2017-02-07T23:59:59",
+        "status": 4,
+        "EstimatedTime": 86400000,
+        "TotalHoursBurned": 14400000,
+        "PercentageCompleted": 31.00,
+        "CheckListMembers": [{ "memberId": 25982, "memberName": "Merry", "displayName": "Merry" }],
+        "attachments": [],
+        "CanLog": true
+    }, {
+        "item": "iOS build",
+        "itemId": 1214,
+        "CheckListDescription": "ios Build",
+        "StartDate": "2017-02-01T00:00:00",
+        "EndDate": "2017-02-07T23:59:59",
+        "status": 4,
+        "EstimatedTime": 86400000,
+        "TotalHoursBurned": 18000000,
+        "PercentageCompleted": 35.00,
+        "CheckListMembers": [{ "memberId": 25979, "memberName": "Gandalf", "displayName": "gandalf" }],
+        "attachments": [],
+        "CanLog": false
+    }],
     name: "Task2",
     dueDate: "2017-04-29T23:59:59",
     burnedHours: "12/12",
@@ -42,6 +154,34 @@ export const TASKS: Task[] = [{
     isAssigned: false
 }, {
     taskId: 36375,
+    taskDesc: "testing",
+    checkList: [{
+        "item": "Android build",
+        "itemId": 1213,
+        "CheckListDescription": "Android build",
+        "StartDate": "2017-02-01T00:00:00",
+        "EndDate": "2017-02-07T23:59:59",
+        "status": 4,
+        "EstimatedTime": 86400000,
+        "TotalHoursBurned": 14400000,
+        "PercentageCompleted": 31.00,
+        "CheckListMembers": [{ "memberId": 25982, "memberName": "Merry", "displayName": "Merry" }],
+        "attachments": [],
+        "CanLog": true
+    }, {
+        "item": "iOS build",
+        "itemId": 1214,
+        "CheckListDescription": "ios Build",
+        "StartDate": "2017-02-01T00:00:00",
+        "EndDate": "2017-02-07T23:59:59",
+        "status": 4,
+        "EstimatedTime": 86400000,
+        "TotalHoursBurned": 18000000,
+        "PercentageCompleted": 35.00,
+        "CheckListMembers": [{ "memberId": 25979, "memberName": "Gandalf", "displayName": "gandalf" }],
+        "attachments": [],
+        "CanLog": false
+    }],
     name: "Test Task",
     dueDate: "2017-05-02T23:59:59",
     burnedHours: "6/12",
@@ -52,6 +192,34 @@ export const TASKS: Task[] = [{
     isAssigned: true
 }, {
     taskId: 36376,
+    taskDesc: "testing",
+    checkList: [{
+        "item": "Android build",
+        "itemId": 1213,
+        "CheckListDescription": "Android build",
+        "StartDate": "2017-02-01T00:00:00",
+        "EndDate": "2017-02-07T23:59:59",
+        "status": 4,
+        "EstimatedTime": 86400000,
+        "TotalHoursBurned": 14400000,
+        "PercentageCompleted": 31.00,
+        "CheckListMembers": [{ "memberId": 25982, "memberName": "Merry", "displayName": "Merry" }],
+        "attachments": [],
+        "CanLog": true
+    }, {
+        "item": "iOS build",
+        "itemId": 1214,
+        "CheckListDescription": "ios Build",
+        "StartDate": "2017-02-01T00:00:00",
+        "EndDate": "2017-02-07T23:59:59",
+        "status": 4,
+        "EstimatedTime": 86400000,
+        "TotalHoursBurned": 18000000,
+        "PercentageCompleted": 35.00,
+        "CheckListMembers": [{ "memberId": 25979, "memberName": "Gandalf", "displayName": "gandalf" }],
+        "attachments": [],
+        "CanLog": false
+    }],
     name: "Testing attachment is Done",
     dueDate: "2017-06-02T23:59:59",
     burnedHours: "5/12",

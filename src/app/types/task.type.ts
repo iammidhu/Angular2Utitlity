@@ -1,5 +1,7 @@
 export class Task {
     taskId: number;
+    taskDesc: string;
+    checkList: Array < any > ;
     name: string;
     dueDate: string;
     burnedHours: string;

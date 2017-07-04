@@ -7,4 +7,9 @@ export class TaskService {
     getAllTask(): Promise < Task[] > {
         return Promise.resolve(TASKS);
     }
+
+    getTaskById(id: number): Promise < Task > {
+        return this.getAllTask()
+            .then(tasks => tasks.find(task => task.taskId === id));
+    }
 }

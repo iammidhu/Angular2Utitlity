@@ -1,4 +1,6 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../types/task.type';
 
@@ -12,7 +14,10 @@ import { Task } from '../../types/task.type';
 
 export class TaskComponent implements OnInit {
     taskList: Task[];
-    constructor(private taskService: TaskService) {}
+    constructor(
+        private taskService: TaskService,
+        private router: Router
+    ) {}
 
     ngOnInit(): void {
         this.initTaskList();
@@ -20,6 +25,10 @@ export class TaskComponent implements OnInit {
 
     private initTaskList(): void {
         this.taskService.getAllTask()
-        	.then(tasks => this.taskList = tasks);
+            .then(tasks => this.taskList = tasks);
+    }
+
+    private gotoDetail(id: number): void {
+        this.router.navigate(['/zb/task', id]);
     }
 }

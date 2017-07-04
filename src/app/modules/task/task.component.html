@@ -8,7 +8,7 @@
                 <div class="task_header_name">Status</div>
                 <div class="task_header_name">Completion</div>
             </div>
-            <div class="task_listing" *ngFor="let task of taskList">
+            <div class="task_listing" *ngFor="let task of taskList" (click)="gotoDetail(task.taskId)">
                 <div class="task_data">{{task.name}}</div>
                 <div class="task_data">{{task.dueDate| date:'fullDate'}}</div>
                 <div class="task_data">{{task.burnedHours}}</div>
@@ -25,7 +25,7 @@
                 <div class="task_header_name">Completion</div>
             </div>
             <ng-template ngFor let-task [ngForOf]="taskList">
-                <div class="task_listing" *ngIf="!task.isAssigned">
+                <div class="task_listing" *ngIf="!task.isAssigned" (click)="gotoDetail(task.taskId)">
                     <div class="task_data">{{task.name}}</div>
                     <div class="task_data">{{task.dueDate| date:'fullDate'}}</div>
                     <div class="task_data">{{task.burnedHours}}</div>
@@ -43,7 +43,7 @@
                 <div class="task_header_name">Completion</div>
             </div>
             <ng-template ngFor let-task [ngForOf]="taskList">
-                <div class="task_listing" *ngIf="!!task.isAssigned">
+                <div class="task_listing" *ngIf="!!task.isAssigned" (click)="gotoDetail(task.taskId)">
                     <div class="task_data">{{task.name}}</div>
                     <div class="task_data">{{task.dueDate| date:'fullDate'}}</div>
                     <div class="task_data">{{task.burnedHours}}</div>
