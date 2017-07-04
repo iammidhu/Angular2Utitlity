@@ -12,7 +12,7 @@ import { AuthenticationService } from '../../_services/authentication.service';
 })
 export class LoginComponent {
 
-    user: any = {};
+    private user: any = {};
 
     constructor(private authenticationService: AuthenticationService, private toastService: ToastService, private router: Router, ) {
 

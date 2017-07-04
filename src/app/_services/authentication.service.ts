@@ -1,39 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
+import { USERS } from '../data/mock.users';
+
 @Injectable()
 export class AuthenticationService {
     constructor(private router: Router) { }
 
     login(user: any) {
-        let userFound = false;
-        let userDetails = {};
-        let userList = [{
-            "email": "midhun@qburst.com",
-            "password": "123456",
-            "name": "Midhun Jayan"
-        },
-            {
-                "email": "nishin@qburst.com",
-                "password": "nishin",
-                "name": "Nishin Nishtar"
-            },
-            {
-                "email": "hari@qburst.com",
-                "password": "hari@123",
-                "name": "Hari Krishnan"
-            }
-        ];
+        let userFound = false, userDetails = {};
+        let userList = USERS;
 
-        for (let u of userList) {
-            if (u.email == user.email && u.password == user.password) {
-                userDetails = u;
-                userFound = true;
-            }
-        }
-
+        userDetails = userList.find((u: any) => u.email === user.email && u.password === user.password);
         if (userDetails) {
-            // store user details and jwt token in local storage to keep user logged in between page refreshes
+            userFound = true;
             localStorage.setItem('currentUser', JSON.stringify(userDetails));
         }
 

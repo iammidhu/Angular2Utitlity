@@ -10,8 +10,12 @@ import { AuthenticationService } from '../../_services/authentication.service';
 })
 export class HeaderComponent {
     @Input() isInnerPage: boolean;
-    constructor(private authenticationService: AuthenticationService) {
 
+    private username: string;
+
+    constructor(private authenticationService: AuthenticationService) {
+        let user = JSON.parse(localStorage.getItem('currentUser'));
+        this.username = user.name;
     }
 
     private logoutUser() {
