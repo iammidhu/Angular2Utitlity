@@ -1,14 +1,18 @@
-<button class="" (click)="deleteItem()" *ngIf="canShowDelete">
-    <mdl-icon>delete</mdl-icon>
-</button>
 <main class="notification_page">
-    <ul *ngFor="let notification of notificationList" class="notification_list">
+    <div class="toolbar">
+        <mdl-button mdl-button-type="icon" mdl-colored="primary" (click)="deleteItem()" *ngIf="canShowDelete">
+            <mdl-icon>delete</mdl-icon>
+        </mdl-button>
+    </div>
+    <ul *ngFor="let notification of notificationList" class="notification_list" [ngClass]="{'active' : notification.selected}">
         <li>
             <mdl-checkbox [(ngModel)]="notification.selected" (change)="showDelete()">
             </mdl-checkbox>
         </li>
-        <li>
-            <mdl-icon>face</mdl-icon>
+        <li [ngSwitch]="notification.type">
+            <mdl-icon *ngSwitchCase="1">face</mdl-icon>
+            <mdl-icon *ngSwitchCase="2">list</mdl-icon>
+            <mdl-icon *ngSwitchCase="3">chat</mdl-icon>
         </li>
         <li class="notification_name">
             {{notification.message}}

@@ -20,7 +20,7 @@ export class LoginComponent {
     private doLogin() {
         let auth = this.authenticationService.login(this.user);
         if (auth) {
-            this.router.navigate(['zb']);
+            this.router.navigate(['zb/home']);
         } else {
             this.toastService.toastMe('Username or password is incorrect');
         }

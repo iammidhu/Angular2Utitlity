@@ -16,18 +16,25 @@ export class HomeComponent {
 
     constructor() {
         this.canShowDelete = false;
-        this.notificationList = NOTIFICATION;
+        this.notificationList = this.duplicateArray(NOTIFICATION);
     }
+
     private showDelete() {
         let selectedArray = this.notificationList.filter((item: any) => item.selected == true);
         (selectedArray.length > 0) ? this.canShowDelete = true : this.canShowDelete = false;
     }
 
     private deleteItem() {
-        let newList = this.notificationList.filter((item) => {
+        this.notificationList = this.notificationList.filter((item) => {
             return item.selected == false;
         });
-
-        this.notificationList = newList;
+        this.showDelete();
     }
+
+    private duplicateArray(items: Array<any>) {
+        let arr: Array<any> = [];
+        items.forEach(x => arr.push({...x}));
+        return arr;
+    }
+
 }

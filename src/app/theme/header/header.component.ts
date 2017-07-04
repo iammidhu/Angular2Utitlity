@@ -15,7 +15,8 @@ export class HeaderComponent {
 
     constructor(private authenticationService: AuthenticationService) {
         let user = JSON.parse(localStorage.getItem('currentUser'));
-        this.username = user.name;
+        if (user)
+            this.username = user.name;
     }
 
     private logoutUser() {
