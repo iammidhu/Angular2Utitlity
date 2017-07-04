@@ -1,0 +1,14 @@
+<header class="main_heading">
+    <div class="logo_wrapper" [class.inner_logo]="!!isInnerPage" mdl-shadow="3">
+        <img src="../../../assets/img/zive_logo.png" alt="">
+        <h1>ZB 2.0</h1>
+    </div>
+    <div class="user_wrapper" *ngIf="isInnerPage">
+        <span>
+          Username
+        </span>
+        <button mdl-button mdl-ripple (click)="logoutUser()">
+          Logout
+        </button>
+    </div>
+</header>

@@ -1,0 +1,53 @@
+.main_heading {
+    height: 70px;
+    background-color: #fff;
+    color: #2c307a;
+    box-shadow: 0 5px 26px -11px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .inner_logo {
+        background-color: rgba(66, 200, 220, 1);
+        color: #fff;
+    }
+
+    .logo_wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 223px;
+        padding: 10px;
+
+        h1 {
+            font-size: 36px;
+            margin: 0 0 0 10px;
+            font-weight: 700;
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+        }
+    }
+
+    .user_wrapper {
+        align-self: center;
+        width: 250px;
+        display: flex;
+        flex-direction: row;
+
+        span {
+            flex-grow: 1;
+        }
+
+        button {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+    }
+}
+
+.header_box {
+    box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.75);
+}

@@ -37,6 +37,14 @@ module.exports = {
             }, {
                 loader: 'sass-loader',
             }]
+        }, {
+            test: /\.json$/,
+            use: [{
+                loader: 'json-loader',
+                options: {
+                    name: './assets/data/[name].[ext]'
+                }
+            }]
         }]
     },
     plugins: [

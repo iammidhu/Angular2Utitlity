@@ -1,0 +1,15 @@
+<mdl-icon *ngIf="canShowDelete">delete</mdl-icon>
+<main class="notification_page">
+    <ul *ngFor="let notification of notificationList" class="notification_list">
+        <li>
+            <mdl-checkbox [(ngModel)]="notification.selected" (change)="showDelete()">
+            </mdl-checkbox>
+        </li>
+        <li>
+          <mdl-icon>face</mdl-icon>
+        </li>
+        <li class="notification_name">
+            {{notification.name}}
+        </li>
+    </ul>
+</main>
