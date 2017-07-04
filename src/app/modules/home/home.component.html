@@ -1,4 +1,4 @@
-<mdl-icon *ngIf="canShowDelete">delete</mdl-icon>
+<mdl-icon *ngIf="canShowDelete" (click)="deleteItem()">delete</mdl-icon>
 <main class="notification_page">
     <ul *ngFor="let notification of notificationList" class="notification_list">
         <li>
@@ -9,7 +9,7 @@
           <mdl-icon>face</mdl-icon>
         </li>
         <li class="notification_name">
-            {{notification.name}}
+            {{notification.message}}
         </li>
     </ul>
 </main>
