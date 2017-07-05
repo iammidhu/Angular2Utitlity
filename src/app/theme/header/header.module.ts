@@ -3,13 +3,16 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { RouterModule }   from '@angular/router';
 
 import { HeaderComponent }     from './header.component';
- 
+import { BreadcrumbComponent }     from './breadcrumb.component';
+
 @NgModule({
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule
   ],
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    BreadcrumbComponent
   ],
   bootstrap: [ HeaderComponent ],
   exports: [HeaderComponent]
