@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, CanActivate } from '@angular/router';
 
 import { USERS } from '../data/mock.users';
 
 @Injectable()
-export class AuthenticationService {
+export class AuthenticationService implements CanActivate {
     constructor(private router: Router) { }
 
     login(user: any) {
@@ -24,5 +24,25 @@ export class AuthenticationService {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
         this.router.navigate(['login']);
+    }
+    canActivate() {
+        if (localStorage.getItem('currentUser')) { return true; }
+        this.router.navigate(['login']);
+        return false;
+    }
+}
+@Injectable()
+export class Authentication implements CanActivate {
+
+    constructor(private router: Router) { }
+
+    canActivate(): boolean {
+
+        if (localStorage.getItem('currentUser'))
+            return true;
+        else {
+            this.router.navigate(['login']);
+            return false;
+        }
     }
 }
