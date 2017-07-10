@@ -23,7 +23,7 @@ export class HomeComponent {
         this.canShowDelete = false;
         this.notificationList = this.duplicateArray(NOTIFICATION);
         this.dataList = this.duplicateArray(DATA);
-        // this.formatDataList();
+        this.formatDataList();
     }
     private formatDataList(): void {
 
@@ -32,19 +32,19 @@ export class HomeComponent {
         let result = [];
         let i = 0;
         let Feb = [];
-        // let March = [];
-        // let April = [];
-        // let May = [];
+        let March = [];
+        let April = [];
+        let May = [];
 
         for (let d of queue) {
             let theDate = new Date(d.DateTime);
             if (theDate.getMonth() == 4)
                 Feb.push(d);
-            // else if(theDate.getMonth() == 2)
+            // else if (theDate.getMonth() == 2)
             //     March.push(d);
-            // else if(theDate.getMonth() == 3)
+            // else if (theDate.getMonth() == 3)
             //     April.push(d);
-            // else if(theDate.getMonth() == 4)
+            // else if (theDate.getMonth() == 4)
             //     May.push(d);
         }
         let a = [];
@@ -80,11 +80,22 @@ export class HomeComponent {
                 newArray.push(x['eachDay']);
             }
         }
-        // console.log(newArray);
-        // let avg = [], sum = 0;
-        // for (let n of newArray) {
-        //     if (n) {
-        //         sum += n[23].average;
+        for (let eachDay of newArray) {
+            if (eachDay) {
+                let average = 0, sum = 0;
+                for (let avg of eachDay) {
+                    sum += avg.average;
+                }
+                average = sum / 24;
+                eachDay['averagePerDay'] = average;
+            }
+        }
+        console.log(JSON.stringify(newArray));
+
+        // for (let x in newArray) {
+        //     if (newArray[x]) {
+        //         let index = parseInt(x) + 1;
+        //         console.log("day" + index + "=" + newArray[x].averagePerDay)
         //     }
         // }
         // console.log(sum/19);
