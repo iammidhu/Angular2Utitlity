@@ -45,6 +45,14 @@ module.exports = {
                     name: './assets/data/[name].[ext]'
                 }
             }]
+        }, {
+            test: /\.csv$/,
+            loader: 'csv-loader?name=assets/[name].[hash].[ext]',
+            options: {
+                dynamicTyping: true,
+                header: true,
+                skipEmptyLines: true
+            }
         }]
     },
     plugins: [
