@@ -2,17 +2,38 @@ div.mdl-tabs__tab-bar {
     display: block !important;
 }
 
-.task_identifiers {
-    height: 60px;
-    width: 100%;
-    .task_id_left {
-        float: left;
-    }
-    .task_id_right {
-        float: right;
-    }
-}
+.task_details_wrapper {
+    padding: 40px 0 0 40px;
 
-.task_details{
-	clear:both;
+    .task_identifiers {
+        min-height: 60px;
+        width: 100%;
+
+        .task_name {
+            margin: 0;
+            font-size: 30px;
+            color: #2c307a;
+        }
+
+        .task_description {
+            min-height: 20px;
+            word-wrap: break-word;
+            color: #333;
+            font-size: 18px;
+            margin-top: 25px;
+        }
+    }
+
+    .task_details {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+
+        .checklist_number,
+        .end_date,
+        .start_date,
+        .task_completion {
+            flex-grow: 1;
+        }
+    }
 }

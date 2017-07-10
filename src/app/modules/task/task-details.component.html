@@ -1,23 +1,21 @@
-<div *ngIf="task">
+<div *ngIf="task" class="task_details_wrapper">
     <!-- <button type="button" (click)="goBack()">Back</button> -->
     <div class="task_identifiers">
-        <div class="task_id_left">
-            <h3 class="task_name">{{task.name}}</h3>
-            <div class="task_description">{{task.taskDesc}}</div>
-        </div>
-        <div class="task_id_right">
-            {{task.PercentageCompleted}}% Completed
-        </div>
+        <h3 class="task_name">{{task.name}}</h3>
+        <p class="task_description">{{task.taskDesc}}</p>
     </div>
-    <div class="task_details">
+    <div class="task_details row">
         <div class="start_date">
-            {{task.createDate}}
+            <b>Start date</b>: {{task.createDate}}
         </div>
         <div class="end_date">
-            {{task.dueDate}}
+            <b>End date</b>: {{task.dueDate}}
         </div>
         <div class="checklist_number">
-            {{task.checkList.length}}
+            <b>No. of checklists</b>: {{task.checkList.length}}
+        </div>
+        <div class="task_completion">
+            <b>{{task.PercentageCompleted}}%</b> Completed
         </div>
     </div>
     <div class="checklist_and_initiative">
