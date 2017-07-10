@@ -4,14 +4,17 @@ import { RouterModule }   from '@angular/router';
 import { MdlModule } from '@angular-mdl/core';
 
 import { HeaderComponent }     from './header.component';
+import { BreadcrumbComponent }     from './breadcrumb.component';
 
 @NgModule({
     imports: [
         BrowserModule,
-        MdlModule
+        MdlModule,
+        RouterModule
     ],
     declarations: [
-        HeaderComponent
+        HeaderComponent,
+        BreadcrumbComponent
     ],
     bootstrap: [HeaderComponent],
     exports: [HeaderComponent]

@@ -4,27 +4,33 @@ import { RouterModule, Routes } from '@angular/router';
 import { WrapperComponent } from './wrapper.component';
 import { HomeComponent } from '../home/home.component';
 import { TaskComponent } from '../task/task.component';
+import { TaskDetailsComponent } from '../task/task-details.component';
 
 import { Authentication } from '../../_services/authentication.service';
 
 const routes: Routes = [{
     path: 'zb',
-    redirectTo: '/zb/home',
-    pathMatch: 'full',
-    canActivate: [Authentication]
-}, {
-        path: 'zb',
-        component: WrapperComponent,
-        canActivate: [Authentication],
-        children: [{
-            path: 'home',
-            component: HomeComponent,
-        }, {
-                path: 'task',
-                component: TaskComponent,
-                canActivate: [Authentication]
-            }]
-    }];
+    component: WrapperComponent,
+    children: [{
+        path: 'home',
+        component: HomeComponent,
+        data: {
+          breadcrumb: "Home"
+        }
+    },{
+    	path:'task',
+    	component:TaskComponent,
+        data: {
+          breadcrumb: "Task"
+        }
+    },{
+        path:'task/:id',
+        component:TaskDetailsComponent,
+        data: {
+          breadcrumb: "Details"
+        }
+    }]
+}];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

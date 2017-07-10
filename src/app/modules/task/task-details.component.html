@@ -1,0 +1,33 @@
+<div *ngIf="task">
+    <!-- <button type="button" (click)="goBack()">Back</button> -->
+    <div class="task_identifiers">
+        <div class="task_id_left">
+            <h3 class="task_name">{{task.name}}</h3>
+            <div class="task_description">{{task.taskDesc}}</div>
+        </div>
+        <div class="task_id_right">
+            {{task.PercentageCompleted}}% Completed
+        </div>
+    </div>
+    <div class="task_details">
+        <div class="start_date">
+            {{task.createDate}}
+        </div>
+        <div class="end_date">
+            {{task.dueDate}}
+        </div>
+        <div class="checklist_number">
+            {{task.checkList.length}}
+        </div>
+    </div>
+    <div class="checklist_and_initiative">
+        <mdl-tabs mdl-ripple mdl-tab-active-index="0">
+            <mdl-tab-panel mdl-tab-panel-title="Checklists">
+                Checklists
+            </mdl-tab-panel>
+            <mdl-tab-panel mdl-tab-panel-title="Initiatives">
+                Initiatives
+            </mdl-tab-panel>
+        </mdl-tabs>
+    </div>
+</div>

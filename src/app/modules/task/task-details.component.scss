@@ -1,0 +1,18 @@
+div.mdl-tabs__tab-bar {
+    display: block !important;
+}
+
+.task_identifiers {
+    height: 60px;
+    width: 100%;
+    .task_id_left {
+        float: left;
+    }
+    .task_id_right {
+        float: right;
+    }
+}
+
+.task_details{
+	clear:both;
+}
