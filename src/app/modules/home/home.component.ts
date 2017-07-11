@@ -38,7 +38,7 @@ export class HomeComponent {
 
         for (let d of queue) {
             let theDate = new Date(d.DateTime);
-            if (theDate.getMonth() == 4)
+            if (theDate.getMonth() == 3)
                 Feb.push(d);
             // else if (theDate.getMonth() == 2)
             //     March.push(d);
@@ -80,17 +80,18 @@ export class HomeComponent {
                 newArray.push(x['eachDay']);
             }
         }
-        for (let eachDay of newArray) {
-            if (eachDay) {
-                let average = 0, sum = 0;
-                for (let avg of eachDay) {
-                    sum += avg.average;
-                }
-                average = sum / 24;
-                eachDay['averagePerDay'] = average;
-            }
-        }
-        console.log(JSON.stringify(newArray));
+        // for (let eachDay of newArray) {
+        //     if (eachDay) {
+        //         let average = 0, sum = 0;
+        //         for (let avg of eachDay) {
+        //             sum += avg.average;
+        //         }
+        //         average = sum / 24;
+        //         eachDay['averagePerDay'] = average;
+        //     }
+        // }
+        // console.log(JSON.stringify(newArray));
+        console.log(newArray);
 
         // for (let x in newArray) {
         //     if (newArray[x]) {
