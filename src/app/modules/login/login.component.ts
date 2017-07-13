@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { ToastService } from '../../_services/toast.service';
-import { AuthenticationService } from '../../_services/authentication.service';
+import { ToastService } from '../../services/toast.service';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
     selector: 'app-login',

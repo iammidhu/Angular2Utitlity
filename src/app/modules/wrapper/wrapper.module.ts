@@ -6,7 +6,7 @@ import { HomeModule }     from '../home/home.module';
 import { TaskModule }     from '../task/task.module';
 import { HeaderModule } from '../../theme/header/header.module';
 
-import { Authentication } from '../../_services/authentication.service';
+import { Authentication } from '../../services/authentication.service';
 
 import { WrapperComponent }     from './wrapper.component';
 import { SideBarComponent }     from '../../theme/sidebar/sideBar.component';

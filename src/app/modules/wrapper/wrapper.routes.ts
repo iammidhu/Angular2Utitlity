@@ -6,7 +6,7 @@ import { HomeComponent } from '../home/home.component';
 import { TaskComponent } from '../task/task.component';
 import { TaskDetailsComponent } from '../task/task-details.component';
 
-import { Authentication } from '../../_services/authentication.service';
+import { Authentication } from '../../services/authentication.service';
 
 const routes: Routes = [{
     path: 'zb',
