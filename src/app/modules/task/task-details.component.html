@@ -1,9 +1,9 @@
 <div *ngIf="task" class="task_details_wrapper">
-    <img src="../../../assets/img/Back.png" alt="" (click)="goBack()" height="30" width="30" style="margin-bottom: 10px;">
     <div class="task_identifiers">
+        <img src="../../../assets/img/Back.png" alt="" (click)="goBack()" height="30" width="30">
         <h3 class="task_name">{{task.name}}</h3>
-        <p class="task_description">{{task.taskDesc}}</p>
     </div>
+    <p class="task_description">{{task.taskDesc}}</p>
     <div class="task_details row">
         <div class="start_date">
             <b>Start date</b>: {{task.createDate | date:"MM/dd/yy"}}
