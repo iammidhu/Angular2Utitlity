@@ -1,15 +1,15 @@
 <div *ngIf="task" class="task_details_wrapper">
-    <!-- <button type="button" (click)="goBack()">Back</button> -->
+    <img src="../../../assets/img/Back.png" alt="" (click)="goBack()" height="30" width="30" style="margin-bottom: 10px;">
     <div class="task_identifiers">
         <h3 class="task_name">{{task.name}}</h3>
         <p class="task_description">{{task.taskDesc}}</p>
     </div>
     <div class="task_details row">
         <div class="start_date">
-            <b>Start date</b>: {{task.createDate}}
+            <b>Start date</b>: {{task.createDate | date:"MM/dd/yy"}}
         </div>
         <div class="end_date">
-            <b>End date</b>: {{task.dueDate}}
+            <b>End date</b>: {{task.dueDate | date:"MM/dd/yy"}}
         </div>
         <div class="checklist_number">
             <b>No. of checklists</b>: {{task.checkList.length}}
@@ -21,10 +21,16 @@
     <div class="checklist_and_initiative">
         <mdl-tabs mdl-ripple mdl-tab-active-index="0">
             <mdl-tab-panel mdl-tab-panel-title="Checklists">
-                Checklists
+                <ul>
+                    <li>Checklist 1</li>
+                    <li>Checklist 2</li>
+                </ul>
             </mdl-tab-panel>
             <mdl-tab-panel mdl-tab-panel-title="Initiatives">
-                Initiatives
+                <ul>
+                    <li>Initiative 1</li>
+                    <li>Initiatives 2 </li>
+                </ul>
             </mdl-tab-panel>
         </mdl-tabs>
     </div>

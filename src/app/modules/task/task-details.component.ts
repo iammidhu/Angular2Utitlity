@@ -16,6 +16,7 @@ import { Task } from '../../types/task.type';
 
 export class TaskDetailsComponent implements OnInit {
     task: Task;
+    private toolTipText: string;
     constructor(
         private taskService: TaskService,
         private route: ActivatedRoute,
@@ -24,6 +25,7 @@ export class TaskDetailsComponent implements OnInit {
 
     ngOnInit(): void {
         this.initGetTaskById();
+        this.toolTipText = "Go back"
     }
 
     private initGetTaskById(): void {
