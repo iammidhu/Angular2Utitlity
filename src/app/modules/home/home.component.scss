@@ -7,6 +7,12 @@
         flex-direction: row-reverse;
     }
 
+    .no_results {
+        margin-left: 25px;
+        color: red;
+        font-size: 16px;
+    }
+
     ul {
         display: flex;
         flex-direction: row;
