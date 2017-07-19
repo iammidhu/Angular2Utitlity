@@ -6,6 +6,7 @@ import { MdlModule } from '@angular-mdl/core';
 
 import { TaskComponent } from './task.component';
 import { TaskDetailsComponent } from './task-details.component';
+import { FilterDataComponent } from '../../shared/filter/filterData.component';
 
 @NgModule({
     imports: [
@@ -15,10 +16,11 @@ import { TaskDetailsComponent } from './task-details.component';
     ],
     declarations: [
         TaskComponent,
-        TaskDetailsComponent
+        TaskDetailsComponent,
+        FilterDataComponent
     ],
     bootstrap: [TaskComponent],
     exports: [MdlModule]
 })
 
-export class TaskModule {}
+export class TaskModule { }

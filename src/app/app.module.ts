@@ -4,8 +4,8 @@ import { HttpModule } from '@angular/http';
 import { FormsModule }   from '@angular/forms';
 import { MdlModule } from '@angular-mdl/core';
 
-import { WrapperModule } from './modules/wrapper/wrapper.module';
-import { LoginModule } from './modules/login/login.module';
+import { WrapperModule } from './modules/main/wrapper/wrapper.module';
+import { LoginModule } from './modules/main/login/login.module';
 
 import { AppComponent } from './app.component';
 

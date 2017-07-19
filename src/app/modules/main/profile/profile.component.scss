@@ -1,0 +1,42 @@
+.profile_wrapper {
+    display: flex;
+    justify-content: center;
+    height: 91vh;
+    align-items: center;
+
+    .profile_box {
+        width: 400px;
+        height: 500px;
+        background: #fff;
+        border-radius: 10px;
+
+        .profile_pic {
+            font-size: 60px;
+            justify-content: center;
+            display: flex;
+        }
+
+        .user_details {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border-bottom: 1px solid #fff7f7;
+
+            p {
+                text-align: center;
+                padding-top: 10px;
+                color: #afb3b6;
+                font-size: 18px;
+            }
+        }
+
+        .other_details {
+            p {
+                text-align: center;
+                padding-top: 10px;
+                color: #000;
+                font-size: 14px;
+            }
+        }
+    }
+}

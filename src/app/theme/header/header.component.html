@@ -5,7 +5,7 @@
     </div>
     <!-- <breadcrumb></breadcrumb> -->
     <div class="user_wrapper" *ngIf="isInnerPage">
-        <span>
+        <span (click)="gotoProfile()">
           {{username}}
         </span>
         <button mdl-button mdl-ripple (click)="logoutUser()">

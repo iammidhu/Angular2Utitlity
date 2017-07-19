@@ -3,8 +3,8 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
-import { TaskService } from '../../services/task.service';
-import { Task } from '../../types/task.type';
+import { TaskService } from '../../../services/task.service';
+import { Task } from '../../../types/task.type';
 
 @Component({
     selector: 'task-details',

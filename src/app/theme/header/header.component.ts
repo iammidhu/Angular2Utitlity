@@ -1,4 +1,5 @@
 import { Component, Input  } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AuthenticationService } from '../../services/authentication.service';
 
@@ -13,12 +14,14 @@ export class HeaderComponent {
 
     private username: string;
 
-    constructor(private authenticationService: AuthenticationService) {
+    constructor(private authenticationService: AuthenticationService, private router: Router) {
         let user = JSON.parse(localStorage.getItem('currentUser'));
         if (user)
             this.username = user.name;
     }
-
+    public gotoProfile() {
+        this.router.navigate(['zb/profile']);
+    }
     private logoutUser() {
         this.authenticationService.logout();
     }

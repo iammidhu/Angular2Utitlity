@@ -4,23 +4,18 @@ import { FormsModule }    from '@angular/forms';
 import { RouterModule }   from '@angular/router';
 import { MdlModule } from '@angular-mdl/core';
 
-import { HeaderModule } from '../../theme/header/header.module';
-
-import { LoginComponent }  from './login.component';
-import { FooterComponent } from '../../theme/footer/footer.component';
+import { ProfileComponent }     from './profile.component';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
-        MdlModule,
-        HeaderModule
+        MdlModule
     ],
     declarations: [
-        LoginComponent,
-        FooterComponent
+        ProfileComponent
     ],
-    bootstrap: [LoginComponent]
+    bootstrap: [ProfileComponent]
 })
 
-export class LoginModule { }
+export class ProfileModule { }

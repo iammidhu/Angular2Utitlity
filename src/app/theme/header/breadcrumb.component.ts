@@ -27,7 +27,7 @@ export class BreadcrumbComponent implements OnInit {
         const ROUTE_DATA_BREADCRUMB: string = "breadcrumb";
         this.router.events.filter(event => event instanceof NavigationEnd).subscribe(event => {
             let root: ActivatedRoute = this.activatedRoute.root;
-            console.log(root);
+            console.log(root.url);
         });
     }
 }

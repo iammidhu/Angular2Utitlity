@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LoginComponent } from './modules/login/login.component';
-import { WrapperComponent } from './modules/wrapper/wrapper.component';
+import { LoginComponent } from './modules/main/login/login.component';
+import { WrapperComponent } from './modules/main/wrapper/wrapper.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },  // Redirect URL

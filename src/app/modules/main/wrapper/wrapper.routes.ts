@@ -5,8 +5,9 @@ import { WrapperComponent } from './wrapper.component';
 import { HomeComponent } from '../home/home.component';
 import { TaskComponent } from '../task/task.component';
 import { TaskDetailsComponent } from '../task/task-details.component';
+import { ProfileComponent } from '../profile/profile.component';
 
-import { Authentication } from '../../services/authentication.service';
+import { Authentication } from '../../../services/authentication.service';
 
 const routes: Routes = [{
     path: 'zb',
@@ -28,6 +29,12 @@ const routes: Routes = [{
         component:TaskDetailsComponent,
         data: {
           breadcrumb: "Details"
+        }
+    },{
+        path:'profile',
+        component:ProfileComponent,
+        data: {
+          breadcrumb: "Profile"
         }
     }]
 }];

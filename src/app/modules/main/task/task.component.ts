@@ -1,8 +1,8 @@
 import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { TaskService } from '../../services/task.service';
-import { Task } from '../../types/task.type';
+import { TaskService } from '../../../services/task.service';
+import { Task } from '../../../types/task.type';
 
 @Component({
     selector: 'task',
@@ -14,10 +14,11 @@ import { Task } from '../../types/task.type';
 
 export class TaskComponent implements OnInit {
     taskList: Task[];
+    private seachKey: string;
     constructor(
         private taskService: TaskService,
         private router: Router
-    ) {}
+    ) { }
 
     ngOnInit(): void {
         this.initTaskList();
@@ -30,5 +31,9 @@ export class TaskComponent implements OnInit {
 
     private gotoDetail(id: number): void {
         this.router.navigate(['/zb/task', id]);
+    }
+
+    public searchTable(data: any) {
+        this.seachKey = data;
     }
 }

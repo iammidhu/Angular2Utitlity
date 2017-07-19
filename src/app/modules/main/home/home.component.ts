@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { NOTIFICATION } from '../../data/mock.notificationList.data';
-import { Notification } from '../../types/notification.type';
+import { NOTIFICATION } from '../../../data/mock.notificationList.data';
+import { Notification } from '../../../types/notification.type';
 
 @Component({
     selector: 'home',
@@ -21,7 +21,7 @@ export class HomeComponent {
 
     private showDelete() {
         let selectedArray = this.notificationList.filter((item: any) => item.selected == true);
-        (selectedArray.length > 0) ? this.canShowDelete = true : this.canShowDelete = false;
+        this.canShowDelete = (selectedArray.length > 0);
     }
 
     private deleteItem() {
