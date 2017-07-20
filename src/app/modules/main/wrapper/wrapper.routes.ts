@@ -11,33 +11,42 @@ import { Authentication } from '../../../services/authentication.service';
 
 const routes: Routes = [{
     path: 'zb',
-    component: WrapperComponent,
-    children: [{
-        path: 'home',
-        component: HomeComponent,
-        data: {
-          breadcrumb: "Home"
-        }
-    },{
-    	path:'task',
-    	component:TaskComponent,
-        data: {
-          breadcrumb: "Task"
-        }
-    },{
-        path:'task/:id',
-        component:TaskDetailsComponent,
-        data: {
-          breadcrumb: "Details"
-        }
-    },{
-        path:'profile',
-        component:ProfileComponent,
-        data: {
-          breadcrumb: "Profile"
-        }
-    }]
-}];
+    redirectTo: '/zb/home',
+    pathMatch: 'full',
+    canActivate: [Authentication]
+}, {
+        path: 'zb',
+        component: WrapperComponent,
+        children: [{
+            path: 'home',
+            component: HomeComponent,
+            canActivate: [Authentication],
+            data: {
+                breadcrumb: "Home"
+            }
+        }, {
+                path: 'task',
+                component: TaskComponent,
+                canActivate: [Authentication],
+                data: {
+                    breadcrumb: "Task"
+                }
+            }, {
+                path: 'task/:id',
+                component: TaskDetailsComponent,
+                canActivate: [Authentication],
+                data: {
+                    breadcrumb: "Details"
+                }
+            }, {
+                path: 'profile',
+                component: ProfileComponent,
+                canActivate: [Authentication],
+                data: {
+                    breadcrumb: "Profile"
+                }
+            }]
+    }];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],

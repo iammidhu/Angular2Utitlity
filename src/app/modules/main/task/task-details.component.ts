@@ -24,7 +24,7 @@ export class TaskDetailsComponent implements OnInit {
 
     ngOnInit(): void {
         this.initGetTaskById();
-        this.toolTipText = "Go back"
+        this.toolTipText = "Go back";
     }
 
     private initGetTaskById(): void {
