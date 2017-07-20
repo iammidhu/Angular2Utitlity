@@ -16,8 +16,7 @@ export class HomeComponent {
 
     constructor() {
         this.canShowDelete = false;
-        // Object.assign(this.notificationList, NOTIFICATION);
-        this.notificationList = NOTIFICATION;
+        this.notificationList = this.duplicateArray(NOTIFICATION);
     }
 
     private showDelete() {
