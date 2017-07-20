@@ -1,7 +1,7 @@
 import { Notification } from '../types/notification.type';
 
 
-export let NOTIFICATION: Notification[] = [{
+export const NOTIFICATION: Notification[] = [{
     notificationId: 1,
     message: "A user has been deleted",
     type: 1,

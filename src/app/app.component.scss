@@ -7,3 +7,7 @@ body {
 .main_content {
     height: 100%;
 }
+
+div.mdl-tabs__tab-bar {
+    display: block !important;
+}

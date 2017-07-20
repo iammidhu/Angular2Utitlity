@@ -8,7 +8,6 @@ import { Task } from '../../types/task.type';
     selector: 'task',
     templateUrl: './task.component.html',
     styleUrls: ['./task.component.scss'],
-    encapsulation: ViewEncapsulation.None,
     providers: [TaskService]
 })
 
