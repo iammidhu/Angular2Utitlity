@@ -1,6 +1,6 @@
 import { Component, Input  } from '@angular/core';
 
-import { AuthenticationService } from '../../_services/authentication.service';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
     selector: 'app-header',
@@ -10,8 +10,13 @@ import { AuthenticationService } from '../../_services/authentication.service';
 })
 export class HeaderComponent {
     @Input() isInnerPage: boolean;
-    constructor(private authenticationService: AuthenticationService) {
 
+    private username: string;
+
+    constructor(private authenticationService: AuthenticationService) {
+        let user = JSON.parse(localStorage.getItem('currentUser'));
+        if (user)
+            this.username = user.name;
     }
 
     private logoutUser() {

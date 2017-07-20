@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { NOTIFICATION } from '../../data/mock.notificationList.data';
+import { Notification } from '../../types/notification.type';
+
 @Component({
     selector: 'home',
     templateUrl: './home.component.html',
@@ -8,40 +11,30 @@ import { Component } from '@angular/core';
 
 export class HomeComponent {
 
-    notificationList: any;
-    canShowDelete: boolean;
+    private notificationList: Notification[];
+    private canShowDelete: boolean;
 
     constructor() {
         this.canShowDelete = false;
-        this.notificationList = [{
-            id: 1,
-            name: "A user has been deleted",
-            type: 1
-        },
-            {
-                id: 2,
-                name: "A user has been created",
-                type: 1
-            }, {
-                id: 3,
-                name: "A new message received in general",
-                type: 2
-            }, {
-                id: 4,
-                name: "Your task has been updated by Jon Doe",
-                type: 2
-            },
-            {
-                id: 5,
-                name: "A new task has assigned to you",
-                type: 2
-            }]
+        this.notificationList = this.duplicateArray(NOTIFICATION);
     }
+
     private showDelete() {
-        this.canShowDelete = true;
+        let selectedArray = this.notificationList.filter((item: Notification) => item.selected == true);
+        this.canShowDelete = (selectedArray.length > 0);
     }
 
     private deleteItem() {
-
+        this.notificationList = this.notificationList.filter((item: Notification) => {
+            return item.selected == false;
+        });
+        this.showDelete();
     }
+
+    private duplicateArray(items: Array<Notification>) {
+        let arr: Array<Notification> = [];
+        items.forEach(x => arr.push({...x}));
+        return arr;
+    }
+
 }

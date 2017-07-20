@@ -39,6 +39,9 @@
 
         span {
             flex-grow: 1;
+            align-self: center;
+            color: #2c307a;
+            text-align: center;
         }
 
         button {
@@ -46,8 +49,4 @@
             margin-right: 10px;
         }
     }
-}
-
-.header_box {
-    box-shadow: 1px 1px 4px -1px rgba(0, 0, 0, 0.75);
 }

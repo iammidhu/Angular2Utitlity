@@ -4,20 +4,31 @@ import { RouterModule, Routes } from '@angular/router';
 import { WrapperComponent } from './wrapper.component';
 import { HomeComponent } from '../home/home.component';
 import { TaskComponent } from '../task/task.component';
+import { TaskDetailsComponent } from '../task/task-details.component';
+
+import { Authentication } from '../../services/authentication.service';
 
 const routes: Routes = [{
-	path:'zb',
-	redirectTo:'/zb/home',
-	pathMatch: 'full'
-},{
     path: 'zb',
     component: WrapperComponent,
     children: [{
         path: 'home',
         component: HomeComponent,
+        data: {
+          breadcrumb: "Home"
+        }
     },{
     	path:'task',
-    	component:TaskComponent
+    	component:TaskComponent,
+        data: {
+          breadcrumb: "Task"
+        }
+    },{
+        path:'task/:id',
+        component:TaskDetailsComponent,
+        data: {
+          breadcrumb: "Details"
+        }
     }]
 }];
 
@@ -25,4 +36,4 @@ const routes: Routes = [{
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
 })
-export class WrapperRouting {}
+export class WrapperRouting { }
