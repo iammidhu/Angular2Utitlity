@@ -10,7 +10,6 @@ import { Task } from '../../../types/task.type';
     selector: 'task-details',
     templateUrl: './task-details.component.html',
     styleUrls: ['./task-details.component.scss'],
-    encapsulation: ViewEncapsulation.None,
     providers: [TaskService]
 })
 

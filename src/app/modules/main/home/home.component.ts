@@ -20,19 +20,19 @@ export class HomeComponent {
     }
 
     private showDelete() {
-        let selectedArray = this.notificationList.filter((item: any) => item.selected == true);
+        let selectedArray = this.notificationList.filter((item: Notification) => item.selected == true);
         this.canShowDelete = (selectedArray.length > 0);
     }
 
     private deleteItem() {
-        this.notificationList = this.notificationList.filter((item) => {
+        this.notificationList = this.notificationList.filter((item: Notification) => {
             return item.selected == false;
         });
         this.showDelete();
     }
 
-    private duplicateArray(items: Array<any>) {
-        let arr: Array<any> = [];
+    private duplicateArray(items: Array<Notification>) {
+        let arr: Array<Notification> = [];
         items.forEach(x => arr.push({...x}));
         return arr;
     }
