@@ -11,7 +11,7 @@
                 <div class="task_data">{{task.dueDate| date:'fullDate'}}</div>
                 <div class="task_data">{{task.burnedHours}}</div>
                 <div class="task_data {{task.status}}">{{task.status}}</div>
-                <div class="task_data percentage">{{task.PercentageCompleted}}%</div>
+                <div class="task_data percentage">{{task.PercentageCompleted|percentageRoundOf:task.PercentageCompleted }}%</div>
             </div>
         </mdl-tab-panel>
         <mdl-tab-panel mdl-tab-panel-title="Owned Task">
@@ -24,7 +24,7 @@
                     <div class="task_data">{{task.dueDate| date:'fullDate'}}</div>
                     <div class="task_data">{{task.burnedHours}}</div>
                     <div class="task_data {{task.status}}">{{task.status}}</div>
-                    <div class="task_data percentage">{{task.PercentageCompleted}}%</div>
+                    <div class="task_data percentage">{{task.PercentageCompleted|percentageRoundOf:task.PercentageCompleted}}%</div>
                 </div>
             </ng-template>
         </mdl-tab-panel>
@@ -38,7 +38,7 @@
                     <div class="task_data">{{task.dueDate| date:'fullDate'}}</div>
                     <div class="task_data">{{task.burnedHours}}</div>
                     <div class="task_data {{task.status}}">{{task.status}}</div>
-                    <div class="task_data percentage">{{task.PercentageCompleted}}%</div>
+                    <div class="task_data percentage">{{task.PercentageCompleted|percentageRoundOf:task.PercentageCompleted}}%</div>
                 </div>
             </ng-template>
         </mdl-tab-panel>

@@ -6,6 +6,7 @@ import { MdlModule } from '@angular-mdl/core';
 
 import { TaskComponent } from './task.component';
 import { TaskDetailsComponent } from './task-details.component';
+import { PercentageRoundOfPipe } from './percentage-round-of.pipe';
 
 @NgModule({
     imports: [
@@ -16,6 +17,7 @@ import { TaskDetailsComponent } from './task-details.component';
     declarations: [
         TaskComponent,
         TaskDetailsComponent,
+        PercentageRoundOfPipe
     ],
     bootstrap: [TaskComponent],
     exports: [MdlModule]
