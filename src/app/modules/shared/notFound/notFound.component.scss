@@ -17,4 +17,13 @@
         margin-left: 12px;
         font-size: 18px;
     }
+
+    a {
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        flex-grow: 1;
+        color: #333;
+        margin: 12px;
+    }
 }
