@@ -4,7 +4,8 @@ import { FormsModule }    from '@angular/forms';
 import { RouterModule }   from '@angular/router';
 import { MdlModule } from '@angular-mdl/core';
 
-import { ProfileComponent }     from './profile.component';
+import { ProfileComponent } from './profile.component';
+import { FilterDataComponent } from '../../shared/filter/filterData.component';
 
 @NgModule({
     imports: [
@@ -13,7 +14,8 @@ import { ProfileComponent }     from './profile.component';
         MdlModule
     ],
     declarations: [
-        ProfileComponent
+        ProfileComponent,
+        FilterDataComponent
     ],
     bootstrap: [ProfileComponent]
 })

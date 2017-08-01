@@ -33,6 +33,7 @@
   "devDependencies": {
     "@types/jasmine": "2.5.36",
     "@types/node": "^6.0.45",
+    "angular2-google-login": "^1.0.9",
     "angular2-template-loader": "^0.6.0",
     "autoprefixer-loader": "^3.2.0",
     "awesome-typescript-loader": "^3.0.4",

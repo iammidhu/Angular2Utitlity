@@ -1,5 +1,23 @@
 import { Component, Output, EventEmitter  } from '@angular/core';
 import { MdlModule } from '@angular-mdl/core';
+import {Directive} from '@angular/core';
+
+
+@Directive({
+  selector: 'button[counting]',
+  host: {
+    '(click)': 'onClick($event.target)'
+  }
+})
+class CountClicks {
+  numberOfClicks = 0;
+
+  onClick() {
+    debugger
+    // console.log("button", btn, "number of clicks:", this.numberOfClicks++);
+  }
+}
+
 
 @Component({
     selector: 'filter-data',

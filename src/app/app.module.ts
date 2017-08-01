@@ -8,6 +8,7 @@ import { WrapperModule } from './modules/main/wrapper/wrapper.module';
 import { LoginModule } from './modules/main/login/login.module';
 
 import { AppComponent } from './app.component';
+import { NotFoundComponent } from './modules/shared/notFound/notFound.component';
 
 import { AppRouting } from './app.routes';
 
@@ -24,6 +25,7 @@ import { AppRouting } from './app.routes';
     ],
     declarations: [
         AppComponent,
+        NotFoundComponent
     ],
     bootstrap: [AppComponent],
 })
