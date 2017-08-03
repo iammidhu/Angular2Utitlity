@@ -18,12 +18,12 @@
             <b>{{task.PercentageCompleted}}%</b> Completed
         </div>
     </div>
+
     <div class="checklist_and_initiative">
         <mdl-tabs mdl-ripple mdl-tab-active-index="0">
             <mdl-tab-panel mdl-tab-panel-title="Checklists">
-                <ul>
-                    <li>Checklist 1</li>
-                    <li>Checklist 2</li>
+                <ul *ngFor="let check of task.checkList">
+                    <li>{{check.item}}</li>
                 </ul>
             </mdl-tab-panel>
             <mdl-tab-panel mdl-tab-panel-title="Initiatives">

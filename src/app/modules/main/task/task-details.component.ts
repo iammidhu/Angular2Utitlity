@@ -20,7 +20,7 @@ export class TaskDetailsComponent implements OnInit {
     private task: Task;
     private item: number;
     private toolTipText: string;
-    private subscription : Subscription;
+    private subscription: Subscription;
     constructor(
         private taskService: TaskService,
         private route: ActivatedRoute,
@@ -33,7 +33,6 @@ export class TaskDetailsComponent implements OnInit {
         this.toolTipText = "Go back";
         this.subscription = this.navService.navItem$
             .subscribe(item => this.item = item);
-        console.log(this.item);
     }
 
     ngOnDestroy() {

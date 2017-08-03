@@ -6,13 +6,14 @@ import { Notification } from '../../../types/notification.type';
 @Component({
     selector: 'home',
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss']
+    // styleUrls: ['./home.component.scss']
 })
 
 export class HomeComponent {
 
     private notificationList: Notification[];
     private canShowDelete: boolean;
+    public title: string = "Home";
 
     constructor() {
         this.canShowDelete = false;
@@ -31,7 +32,7 @@ export class HomeComponent {
         this.showDelete();
     }
 
-    private duplicateArray(items: Array<Notification>) {
+    public duplicateArray(items: Array<Notification>) {
         let arr: Array<Notification> = [];
         items.forEach(x => arr.push({...x}));
         return arr;

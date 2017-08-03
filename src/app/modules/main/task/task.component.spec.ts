@@ -18,4 +18,8 @@ describe('Pipe: percent', () => {
     it('providing a correct value returns expected output', () => {
         expect(pipe.transform(6.67777)).toBe(6.7);
     });
+
+    // it('providing a string value returns false', () => {
+    //     expect(pipe.transform("6.67777")).toBe(0);
+    // });
 });

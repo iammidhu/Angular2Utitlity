@@ -1,6 +1,7 @@
 <main class="notification_page">
+  <h1>{{title}}</h1>
     <div class="toolbar">
-        <mdl-button mdl-button-type="icon" mdl-colored="primary" (click)="deleteItem()" *ngIf="canShowDelete">
+        <mdl-button mdl-button-type="icon" mdl-colored="primary" (click)="deleteItem()" *ngIf="canShowDelete" id="delete">
             <mdl-icon>delete</mdl-icon>
         </mdl-button>
     </div>
